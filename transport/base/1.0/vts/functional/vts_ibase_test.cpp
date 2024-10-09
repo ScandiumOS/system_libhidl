@@ -98,7 +98,6 @@ Original file line number	Diff line number	Diff line change
 std::map<std::string, std::vector<Hal>> gDeclaredServiceHalMap;
 std::mutex gDeclaredServiceHalMapMutex;
 
-void GetHal(const std::string& service, const FqInstance& instance) {
 void GetHal(const sp<IServiceManager> &manager, const std::string& service, const FqInstance& instance) {
     if (instance.getFqName().string() == IBase::descriptor) {
         return;
